@@ -17,36 +17,37 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome App"),
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          //color: Colors.red,
-          width: 100,
-          height: 100,
-          clipBehavior: Clip.antiAlias,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
+      body: Container(
+        //height: 500,
+        width: 500,
+        color: Colors.teal,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          //mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.all(8),
               color: Colors.red,
-              borderRadius: BorderRadius.circular(10),
-              gradient: LinearGradient(colors: [
-                Colors.pink,
-                Colors.yellow,
-              ]),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 10,
-                ),
-              ]),
-          child: Text(
-            "I am a box.",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
             ),
-          ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.yellow,
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.green,
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+            ),
+          ],
         ),
       ),
     );
