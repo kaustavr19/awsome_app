@@ -17,39 +17,46 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome App"),
       ),
-      body: Container(
-        //height: 500,
-        width: 500,
-        color: Colors.teal,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          //mainAxisSize: MainAxisSize.max,
+      body: Center(
+        child: Container(
+          height: 100,
+          width: 100,
+          color: Colors.teal,
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: const EdgeInsets.all(0),
           children: <Widget>[
-            Container(
-              padding: const EdgeInsets.all(8),
-              color: Colors.red,
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
+            UserAccountsDrawerHeader(
+              accountName: Text("Kaustav Roy"),
+              accountEmail: Text("kaustav574@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://images.unsplash.com/photo-1502466650593-b65a2c690da0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8a2lkfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
+              ),
             ),
-            Container(
-              padding: const EdgeInsets.all(8),
-              color: Colors.yellow,
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Kaustav Roy"),
+              subtitle: Text("soon to be flutter dev"),
+              trailing: Icon(Icons.edit),
+              onTap: () {},
             ),
-            Container(
-              padding: const EdgeInsets.all(8),
-              color: Colors.green,
-              width: 100,
-              height: 100,
-              alignment: Alignment.center,
+            ListTile(
+              leading: Icon(Icons.email),
+              title: Text("Contact Me"),
+              subtitle: Text("kaustav574@gmail.com"),
+              trailing: Icon(Icons.edit),
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.edit),
+      ),
+      //floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }
