@@ -1,6 +1,7 @@
 # awsome_app
 
-A new Flutter application.
+A new Flutter application, created while learning the basics of Flutter.
+You can use them to, as the code are built step by step, covering every important basic aspects.
 
 ## Getting Started
 
