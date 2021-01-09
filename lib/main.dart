@@ -1,5 +1,6 @@
 import 'package:awsome_app/pages/home_page.dart';
 import 'package:awsome_app/pages/homepagewithfuturebuilder.dart';
+import 'package:awsome_app/pages/homepagewithstreambuilder.dart';
 import 'package:awsome_app/pages/login_page.dart';
 import 'package:awsome_app/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Constants.prefs.getBool("loggedIn") == true
-          ? HomepageFB()
+          ? HomepageSB()
           : LoginPage(),
       theme: ThemeData(
         primarySwatch: Colors.purple,
