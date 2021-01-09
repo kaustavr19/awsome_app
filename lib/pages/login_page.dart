@@ -1,4 +1,5 @@
 import 'package:awsome_app/pages/home_page.dart';
+import 'package:awsome_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -62,12 +63,13 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             RaisedButton(
                               onPressed: () {
+                                Constants.prefs.setBool("loggedIn", true);
                                 //formkey.currentState.validate();
                                 //Navigator.push(
                                 //context,
                                 // MaterialPageRoute(
                                 // builder: (context) => Homepage()));
-                                Navigator.pushNamed(
+                                Navigator.pushReplacementNamed(
                                     context, Homepage.routeName);
                               },
                               child: Text("Sign In"),
